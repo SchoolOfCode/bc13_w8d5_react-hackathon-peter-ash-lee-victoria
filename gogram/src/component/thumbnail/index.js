@@ -3,9 +3,11 @@
 // img with href = {results[i].thumbnail}
 // this image also needs to be ahyperlink that goes to results[i].URL
 
-
-export default function Thumbnail ({link, url}){
-   return(
-    <a href={link}> <img src={url} alt="result"/> </a>
-   )
+export default function Thumbnail({ url, thumbnail }) {
+  return (
+    <a href={url}>
+      {" "}
+      <img src={thumbnail} alt="result" />{" "}
+    </a>
+  );
 }
