@@ -33,6 +33,7 @@ function App() {
     // call api with inputValue
     // update search results
     setSearchResults(getResults(inputValue))
+    console.log("searchResult:", searchResults)
   }
 
   function handleChange(e) {
@@ -41,8 +42,8 @@ function App() {
 
   return (
     <div className="App">
-      <Search handleChange={(e)=>handleChange(e)}/> // check this
-      <Results handleClick={handleClick}/>
+      <Search handleChange={(e)=>handleChange(e)} handleClick={handleClick}/> // check this
+      <Results searchResults={searchResults} />
     </div>
   );
 }
