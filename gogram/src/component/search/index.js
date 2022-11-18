@@ -1,12 +1,10 @@
 // import CSS file
 
-export default function ({handleChange, handleClick}){
+export default function Search ({handleChange, handleClick}){
 
-return(
-
-    <div> 
-        <input type="text" placeholder="Search here..." onChange={handleChange}> </input>
-        <button onClick={handleClick}> GO </button>
-    </div>
-
-)} 
+    return(
+        <div> 
+            <input type="text" placeholder="Search here..." onChange={handleChange}/> 
+            <button onClick={handleClick}> GO </button>
+        </div>
+    )} 
