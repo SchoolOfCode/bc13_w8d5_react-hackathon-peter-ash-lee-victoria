@@ -5,10 +5,14 @@
 // <Thumbnail searchResults={searchResults}/>
 
 import Thumbnail from "../thumbnail";
+import "./results.css"
 
 export default function Results({ searchResults }) {
-  console.log("thumbnail component", searchResults);
-  return searchResults.map((Result, i) => (
-    <Thumbnail key={i} url={Result[1].url} thumbnail={Result[1].thumbnail} />
-  ));
+  return(
+    <div className="Results">
+   {searchResults.map((Result, i) => (
+    <Thumbnail key={i} url={Result.url} thumbnail={Result.thumbnail} />
+  ))}
+  </div>
+  )
 }

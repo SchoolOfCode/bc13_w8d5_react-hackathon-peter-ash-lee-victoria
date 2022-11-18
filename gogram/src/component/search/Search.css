@@ -29,3 +29,9 @@ button:hover{
     scale: 98%;
     cursor: pointer;
 }
+
+.logo{
+    width: 200px;
+    height: auto;
+    border-radius: 0px;
+}

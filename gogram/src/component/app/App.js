@@ -27,23 +27,12 @@ function App() {
     );
 
     let data = await response.json();
-    console.log("resultsData:", data.value);
-    let results = Object.entries(data.value);
-    if (Array.isArray(results)) {
-      return results;
-    } else {
-      console.log("its a object");
-    }
-    console.log("obj.entries", Object.entries(data.value));
-
-    //return Object.entries(data.value);
+    return await data.value;
   }
 
-  function handleClick() {
-    // call api with inputValue
-    // update search results
-    setSearchResults(getResults(inputValue));
-    console.log("search results at handle click", searchResults);
+  async function handleClick() {
+    let temp = await getResults(inputValue);
+    setSearchResults(temp);
   }
 
   function handleChange(e) {
